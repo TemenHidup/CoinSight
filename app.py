@@ -221,9 +221,25 @@ coin_short = {
     'BNB': 'BNB'
 }
 
-@st.cache_data
+# @st.cache_data
+# def download_data(ticker):
+#     df = yf.download(ticker, start='2020-12-01', end='2025-12-01')
+#     return df
+
+@st.cache_data(show_spinner=False)
 def download_data(ticker):
-    df = yf.download(ticker, start='2020-12-01', end='2025-12-01')
+    df = yf.download(
+        ticker,
+        start='2020-12-01',
+        end='2025-12-01',
+        progress=False,
+        auto_adjust=False,
+        threads=False
+    )
+
+    if df is None or df.empty:
+        raise ValueError(f"Failed to fetch data for {ticker}")
+
     return df
 
 
