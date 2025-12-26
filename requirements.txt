@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 streamlit
 yfinance
 pandas
@@ -5,4 +6,13 @@ numpy
 scikit-learn
 plotly
 tensorflow-cpu==2.20.0
+=======
+streamlit
+yfinance
+pandas
+numpy
+scikit-learn
+plotly
+tensorflow-cpu==2.20.0
+>>>>>>> a0e92438cb675a960920ec3d72e97d2aa263d4e2
 matplotlib
