@@ -783,38 +783,38 @@ def historical_page():
     # ===============================
     # PLOT 2 — INTERACTIVE LINE CHART (1D ONLY)
     # ===============================
-    st.markdown("### 📈 Close Price Trend")
+    # st.markdown("### 📈 Close Price Trend")
 
-    # Dropdown for selecting the coin for the line graph
-    coin_choice_line = st.selectbox("Select coin to view Close Price trend", 
-                                    ["Bitcoin","Ethereum","BNB"], 
-                                    key="line_select")
+    # # Dropdown for selecting the coin for the line graph
+    # coin_choice_line = st.selectbox("Select coin to view Close Price trend", 
+    #                                 ["Bitcoin","Ethereum","BNB"], 
+    #                                 key="line_select")
 
-    df_selected = df_map[coin_choice_line]
-    symbol_line = coin_choice_line
+    # df_selected = df_map[coin_choice_line]
+    # symbol_line = coin_choice_line
     
-    # Define a color for the selected line
-    line_color_map = {"Bitcoin": "#00E0B8", "Ethereum": "#FFD166", "BNB": "#2A9D8F"}
+    # # Define a color for the selected line
+    # line_color_map = {"Bitcoin": "#00E0B8", "Ethereum": "#FFD166", "BNB": "#2A9D8F"}
     
-    fig_line = go.Figure()
-    fig_line.add_trace(go.Scatter(
-        x=df_selected.index,
-        y=safe_series(df_selected["Close"]),
-        name=symbol_line,
-        mode="lines",
-        line=dict(width=2, color=line_color_map[coin_choice_line])
-    ))
+    # fig_line = go.Figure()
+    # fig_line.add_trace(go.Scatter(
+    #     x=df_selected.index,
+    #     y=safe_series(df_selected["Close"]),
+    #     name=symbol_line,
+    #     mode="lines",
+    #     line=dict(width=2, color=line_color_map[coin_choice_line])
+    # ))
 
-    fig_line.update_layout(
-        title=f"{symbol_line} Close Price History",
-        template="plotly_dark",
-        height=400,
-        margin=dict(l=20, r=20, t=40, b=20),
-        xaxis_title="Date",
-        yaxis_title="Close Price (USD)"
-    )
+    # fig_line.update_layout(
+    #     title=f"{symbol_line} Close Price History",
+    #     template="plotly_dark",
+    #     height=400,
+    #     margin=dict(l=20, r=20, t=40, b=20),
+    #     xaxis_title="Date",
+    #     yaxis_title="Close Price (USD)"
+    # )
 
-    st.plotly_chart(fig_line, use_container_width=True)
+    # st.plotly_chart(fig_line, use_container_width=True)
 
 
 
@@ -850,7 +850,7 @@ if page == 'Prediction':
         st.markdown("### Load Model")
 
         # LOAD MODEL (tanpa dropdown tambahan)
-        if st.button('Load Model'):
+        if st.button('Run Prediction'):
 
             # =====================================================
             # RESET SESSION STATE — WAJIB supaya tidak crash
