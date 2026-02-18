@@ -688,6 +688,40 @@ if page == "Information":
     - Models were trained with a **60-day sliding window**, giving strong pattern learning on volatile crypto data  
     - Forecasts become less certain the further they project into the future  
 
+        ---
+    ## 📊 Understanding Evaluation Metrics
+
+    To measure how well the prediction models perform, the system uses several evaluation metrics:
+
+    ### 🔹 RMSE (Root Mean Squared Error)
+    RMSE measures how far the predicted values are from the actual prices on average.  
+    A lower RMSE means the model makes smaller prediction errors.  
+    Because it squares errors, it gives more weight to large mistakes.
+
+    👉 In simple terms: RMSE shows how big the prediction errors are.
+
+    ### 🔹 MAE (Mean Absolute Error)
+    MAE calculates the average absolute difference between predicted and actual values.  
+    Unlike RMSE, it does not heavily penalize large errors.
+
+    👉 MAE tells you the average prediction error in real price units.
+
+    ### 🔹 MAPE (Mean Absolute Percentage Error)
+    MAPE expresses prediction error as a percentage.  
+    For example, a MAPE of 5% means the model’s predictions are off by 5% on average.
+
+    👉 MAPE helps users easily understand model accuracy in percentage form.
+
+    ### 🔹 R² (Coefficient of Determination)
+    R² measures how well the model explains the movement of the actual price data.  
+    Its value ranges from 0 to 1.  
+    The closer to 1, the better the model fits the real data.
+
+    👉 R² shows how strong the relationship is between predictions and real prices.
+
+    ---
+
+
     ---
 
     ## 🚀 Ready to Explore?
